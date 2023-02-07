@@ -15,16 +15,18 @@ inquirer
   },
   {
       type: 'checkbox',
-      name: 'tableOfContents',
+      name: 'toc',
       message: "Please enter a table of contents list.",
       choices: ['Description','License','Contributors'],
     },
     {
       type: 'input',
+      name: 'install',
       message: "Installation?",
     },
     {
       type: 'input',
+      name: 'use',
       message: "Usage?",
     },
     {
@@ -35,14 +37,17 @@ inquirer
     },
     {
       type: 'input',
+      name: 'collab',
       message: "Are there any contributors on this project? If so, please enter their usernames.",
     },
     {
       type: 'input',
+      name: 'test',
       message: "Tests?",
     },
   {
       type: 'input',
+      name: 'quest',
       message: "Questions?"
   },
   ]
@@ -53,8 +58,10 @@ inquirer
   .catch((error) => {
     if (error.isTtyError) {
       // Prompt couldn't be rendered in the current environment
+      console.log("no go prompt")
     } else {
       // Something else went wrong
+      console.log("uh oh");
     }
   });
   
@@ -66,6 +73,8 @@ function writeToFile(fileName, data) {
     )
 }
 writeToFile();
+
+// fs to append to the file line break using '\n' 
 
 // TODO: Create a function to initialize app
 function init() {}
