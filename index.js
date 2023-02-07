@@ -1,8 +1,7 @@
 // TODO: Include packages needed for this application
-npm i inquirer@8.2.4
-npm install inquirer
+//npm i inquirer@8.2.4
 
-var inquirer = require('inquirer');
+const inquirer = require('inquirer');
 inquirer
   .prompt([
     /* Pass your questions in here */

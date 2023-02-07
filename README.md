@@ -14,3 +14,5 @@ A high-quality README will consist of the following:
 - Questions
 
 [The inquirer package](https://www.npmjs.com/package/inquirer/v/8.2.4) is provided by nonlinear programming methods (npm) and "provides the user interface and the inquiry session flow."
+
+Learned how to use npm init -y and npm i inquirer@8.2.4
