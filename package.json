@@ -1,10 +1,7 @@
 {
-  "dependencies": {
-    "inquirer": "^8.2.4"
-  },
   "name": "09-readme-generator",
-  "description": "Using starter code provided by the boot camp, this app will generate high-quality README files by usign the command line. The user will input information and the 'Inquirer package' will be used for deynamically creating the README.",
   "version": "1.0.0",
+  "description": "Using starter code provided by the boot camp, this app will generate high-quality README files by usign the command line. The user will input information and the 'Inquirer package' will be used for deynamically creating the README.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/katievlasic/09-readme-generator/issues"
   },
-  "homepage": "https://github.com/katievlasic/09-readme-generator#readme"
+  "homepage": "https://github.com/katievlasic/09-readme-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  }
 }

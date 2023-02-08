@@ -18,3 +18,8 @@ function generateMarkdown(data) {
 }
 
 module.exports = generateMarkdown;
+
+// module exports allows export from one file to another
+
+// ` = template literal : literal translation, no JS reading 
+// $ = template expression to access dynamically JS
