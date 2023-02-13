@@ -4,10 +4,14 @@ const generateMarkdown = require("./assets/generateMarkdown");
 const renderLicenseBadge = require("./assets/generateMarkdown"); 
 
 // Function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(fileName, data, license) {
   fs.writeFile(fileName, data, (err) =>
   err ? console.log(err) : console.log("Sucess!")
-  )};
+  );
+  // fs.appendFile(fileName, license, (err) =>
+  // err ? console.log(err) : console.log("License Added!")
+  // )};
+};
 
 // Function to initialize app
 function init() {
@@ -65,7 +69,7 @@ function init() {
       console.log(answers);
       const license = renderLicenseBadge(answers);
       const data = generateMarkdown(answers);
-      writeToFile('./dist/README.md', license, data);
+      writeToFile('./dist/README.md', data, license);
     })
     .catch((error) => {
       if (error) {
@@ -95,4 +99,3 @@ init();
 //   collab: 'No',
 //   test: 'Will cover this next. Ask the user what testing instructions are build in and how to run? (ex. npm run test etc.)',
 //   quest: "Standard practice to include a questions header and how to include how to contact owner for any questions. Reference docs for any questions! Include user's email address and user name (2 questions)"
-// }
