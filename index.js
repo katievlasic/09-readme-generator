@@ -2,16 +2,13 @@ const fs = require("fs"); // fs = file system
 const inquirer = require("inquirer"); // module package
 const generateMarkdown = require("./assets/generateMarkdown"); 
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, (err) =>
+// Function to write README file
+function writeToFile(fileName, data, dataTwo) {
+  fs.writeFile(fileName, data, dataTwo, (err) =>
   err ? console.log(err) : console.log("Sucess!")
-  );
-}
+  )};
 
-// fs to append to the file line break using '\n'
-
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
   inquirer
     .prompt([
@@ -23,23 +20,17 @@ function init() {
       {
         type: "input",
         name: "description",
-        message: "Please enter a description of the project.",
-      },
-      {
-        type: "checkbox",
-        name: "toc",
-        message: "Please enter a table of contents list.",
-        choices: ["Description", "License", "Contributors"],
+        message: "Please enter a description of the project:",
       },
       {
         type: "input",
         name: "install",
-        message: "Installation?",
+        message: "What is required for install to run this application (ex. npm i ...)?",
       },
       {
         type: "input",
         name: "use",
-        message: "Usage?",
+        message: "Please describe how this application will be used (or the intent of use):",
       },
       {
         type: "list",
@@ -47,33 +38,33 @@ function init() {
         message: "What license (if any) are you using?",
         choices: [
           "none",
-          "Apache LIcense 2.0",
+          "Apache License 2.0",
           "GNU General Pulic License v3.0",
           "MIT License",
-          "BSD 3-Clause New or Revised License",
         ],
       },
       {
         type: "input",
         name: "collab",
         message:
-          "please enter contributor usernames.",
+          "Please enter any contributor Github usernames:",
       },
       {
         type: "input",
         name: "test",
-        message: "Tests?",
+        message: "What are your testing instructions on how to run this application?",
       },
       {
         type: "input",
         name: "quest",
-        message: "Questions?",
+        message: "Please use the following contact and/or reference information for questions regarding this application:",
       },
     ])
     .then((answers) => {
       console.log(answers);
-      const data = generateMarkdown(answers)
-      writeToFile('./dist/README.md', data);
+      const data = generateMarkdown(answers);
+      const dataTwo = renderLicenseBadge(answers[4]);
+      writeToFile('./dist/README.md', data, dataTwo);
     })
     .catch((error) => {
       if (error) {
@@ -89,7 +80,7 @@ init();
 // npm i inquirer@8.2.4
 
 // TODO: Include packages needed for this application
-// TODO: Create an array of questions for user input
+
 
 
 // answers object from 2/7/23
