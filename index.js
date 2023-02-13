@@ -1,10 +1,11 @@
 const fs = require("fs"); // fs = file system
 const inquirer = require("inquirer"); // module package
-const generateMarkdown = require("./assets/generateMarkdown"); 
+const generateMarkdown = require("./assets/generateMarkdown");
+const renderLicenseBadge = require("./assets/generateMarkdown"); 
 
 // Function to write README file
-function writeToFile(fileName, data, dataTwo) {
-  fs.writeFile(fileName, data, dataTwo, (err) =>
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, (err) =>
   err ? console.log(err) : console.log("Sucess!")
   )};
 
@@ -62,9 +63,9 @@ function init() {
     ])
     .then((answers) => {
       console.log(answers);
+      const license = renderLicenseBadge(answers);
       const data = generateMarkdown(answers);
-      const dataTwo = renderLicenseBadge(answers[4]);
-      writeToFile('./dist/README.md', data, dataTwo);
+      writeToFile('./dist/README.md', license, data);
     })
     .catch((error) => {
       if (error) {
