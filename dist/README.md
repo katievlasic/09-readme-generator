@@ -13,10 +13,10 @@
  5 
  
  ## Tests 
- 6 
+  
  
  ## Questions? 
- 7 
+  
  
  ## License 
- Apache License 2.0 
+ MIT License 

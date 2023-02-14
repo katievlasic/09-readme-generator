@@ -65,7 +65,7 @@ function init() {
     .then((answers) => {
       console.log(answers);
       const data = generateMarkdown(answers);
-      const lic = renderLicenseBadge(answers);
+      //const lic = renderLicenseBadge(answers);
       writeToFile('./dist/README.md', data);
     })
     .catch((error) => {
