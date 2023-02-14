@@ -26,14 +26,13 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title} \n \n ## Description \n ${data.description} \n \n ## Installation \n ${data.install} \n \n ## Usage \n ${data.use} \n \n ## Credits \n ${data.collab} \n \n ## Tests \n ${data.test} \n \n ## Questions? \n ${data.quest} \n \n ## License \n ${data.license} \n`;
-  ;
+  return `# ${data.title} \n \n ## Description \n ${data.description} \n \n ## Installation \n ${data.install} \n \n ## Usage \n ${data.use} \n \n ## Credits \n ${data.collab} \n \n ## Tests \n ${data.test} \n \n ## Questions? \n ${data.quest} \n \n ## License \n ${data.license} \n;
+  ${renderLicenseBadge}`;
+
 }
 
 // module exports allows export from one file to another
-module.exports = generateMarkdown;
-//renderLicenseBadge };
-
+module.export = generateMarkdown;
 
 // ` = template literal : literal translation, no JS reading 
 // $ = template expression to access dynamically JS

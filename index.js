@@ -1,16 +1,13 @@
 const fs = require("fs"); // fs = file system
 const inquirer = require("inquirer"); // module package
 const generateMarkdown = require("./assets/generateMarkdown");
-const renderLicenseBadge = require("./assets/generateMarkdown"); 
+const renderLicenseBadge = require("./assets/generateMarkdown");
 
 // Function to write README file
-function writeToFile(fileName, data, license) {
+function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) =>
   err ? console.log(err) : console.log("Sucess!")
   );
-  // fs.appendFile(fileName, license, (err) =>
-  // err ? console.log(err) : console.log("License Added!")
-  // )};
 };
 
 // Function to initialize app
@@ -67,9 +64,9 @@ function init() {
     ])
     .then((answers) => {
       console.log(answers);
-      const license = renderLicenseBadge(answers);
       const data = generateMarkdown(answers);
-      writeToFile('./dist/README.md', data, license);
+      const lic = renderLicenseBadge(answers);
+      writeToFile('./dist/README.md', data);
     })
     .catch((error) => {
       if (error) {
