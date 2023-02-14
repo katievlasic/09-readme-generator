@@ -10,10 +10,10 @@
  4 
  
  ## Credits 
- 4 
+ 5 
  
  ## Tests 
-  
+ 2 
  
  ## Questions? 
   
@@ -21,8 +21,8 @@
  ## License 
  GNU General Pulic License v3.0 
  
- ![MIT License](https://img.shields.io/badge/license-MIT-brightgreen) 
+ ![GNU License](https://img.shields.io/badge/license-GNU%20v3.0-brightgreen") 
  
- [MIT License]("https://en.wikipedia.org/wiki/MIT_License") 
+ [GNU License]("https://www.gnu.org/licenses/licenses.en.html") 
  
- "A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code."
+ "The GNU GPL is the most widely used free software license and has a strong copyleft requirement. When distributing derived works, the source code of the work must be made available under the same license. There are multiple variants of the GNU GPL, each with different requirements."
