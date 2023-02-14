@@ -9,7 +9,7 @@ function renderLicenseBadge(license) {
   } else if (license === "GNU General Pulic License v3.0"){
     return  `![GNU License](https://img.shields.io/badge/license-GNU%20v3.0-brightgreen")`;
   } else {
-    ""
+    return ``
   }
 };
 
@@ -22,7 +22,7 @@ function renderLicenseLink(license) {
   } else if (license === "GNU General Pulic License v3.0"){
     return  `[GNU License]("https://www.gnu.org/licenses/licenses.en.html")`;
   } else {
-    ""
+    return ``
   }
 };
 
@@ -35,17 +35,14 @@ function renderLicenseSection(license) {
   } else if (license === "GNU General Pulic License v3.0"){
     return  `"The GNU GPL is the most widely used free software license and has a strong copyleft requirement. When distributing derived works, the source code of the work must be made available under the same license. There are multiple variants of the GNU GPL, each with different requirements."`;
   } else {
-    ""
+    return ``
   }
 
 };
 
 // Generate .md for README
 const license = `${data.license}`
-renderLicenseBadge(license);
-renderLicenseLink(license);
-renderLicenseSection(license);
-return `# ${data.title} \n \n ## Description \n ${data.description} \n \n ## Table of Contents \n -Installation \n -Usage \n -Credits \n -License \n \n ## Installation \n ${data.install} \n \n ## Usage \n ${data.use} \n \n ## Credits \n ${data.collab} \n \n ## Tests \n ${data.test} \n \n ## Questions? \n ${data.quest} \n \n ## License \n ${data.license} \n \n ${renderLicenseBadge(license)} \n \n ${renderLicenseLink(license)} \n \n ${renderLicenseSection(license)}`;
+return `# ${data.title} \n \n ## Description \n ${data.description} \n \n ${renderLicenseBadge(license)} \n \n ## Table of Contents \n \n * [Installation](##Installation) \n \n * [Usage](##Usage) \n \n * [Contributing](##Contributing) \n \n * [License](#license) \n \n ## Installation \n ${data.install} \n \n ## Usage \n ${data.use} \n \n ## Contributing \n ${data.collab} \n \n ## Tests \n ${data.test} \n \n ## Questions? \n ${data.quest} \n \n ## License <a name="license"></a> \n ${data.license} \n \n ${renderLicenseLink(license)} \n \n ${renderLicenseSection(license)}`;
 
 };
 
