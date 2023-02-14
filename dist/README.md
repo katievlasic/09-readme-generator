@@ -10,13 +10,13 @@
  4 
  
  ## Credits 
- 5 
+ 1 
  
  ## Tests 
-  
+ 2 
  
  ## Questions? 
   
  
  ## License 
- MIT License 
+ GNU General Pulic License v3.0 

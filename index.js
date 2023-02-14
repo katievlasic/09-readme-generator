@@ -2,6 +2,8 @@ const fs = require("fs"); // fs = file system
 const inquirer = require("inquirer"); // module package
 const generateMarkdown = require("./assets/generateMarkdown");
 const renderLicenseBadge = require("./assets/generateMarkdown");
+const renderLicenseLink = require("./assets/generateMarkdown");
+const renderLicenseSection = require("./assets/generateMarkdown");
 
 // Function to write README file
 function writeToFile(fileName, data) {
@@ -65,7 +67,6 @@ function init() {
     .then((answers) => {
       console.log(answers);
       const data = generateMarkdown(answers);
-      //const lic = renderLicenseBadge(answers);
       writeToFile('./dist/README.md', data);
     })
     .catch((error) => {
