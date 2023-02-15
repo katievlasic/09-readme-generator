@@ -7,11 +7,11 @@
  
  ## Table of Contents 
  
- * [Installation](##Installation) 
+ * [Installation](#installation) 
  
- * [Usage](##Usage) 
+ * [Usage](#usage) 
  
- * [Contributing](##Contributing) 
+ * [Contributing](#contributing) 
  
  * [License](#license) 
  
@@ -30,7 +30,7 @@
  ## Questions? 
   
  
- ## License <a name="license"></a> 
+ ## License 
  none 
  
   

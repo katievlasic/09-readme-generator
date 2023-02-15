@@ -42,7 +42,7 @@ function renderLicenseSection(license) {
 
 // Generate .md for README
 const license = `${data.license}`
-return `# ${data.title} \n \n ## Description \n ${data.description} \n \n ${renderLicenseBadge(license)} \n \n ## Table of Contents \n \n * [Installation](##Installation) \n \n * [Usage](##Usage) \n \n * [Contributing](##Contributing) \n \n * [License](#license) \n \n ## Installation \n ${data.install} \n \n ## Usage \n ${data.use} \n \n ## Contributing \n ${data.collab} \n \n ## Tests \n ${data.test} \n \n ## Questions? \n ${data.quest} \n \n ## License <a name="license"></a> \n ${data.license} \n \n ${renderLicenseLink(license)} \n \n ${renderLicenseSection(license)}`;
+return `# ${data.title} \n \n ## Description \n ${data.description} \n \n ${renderLicenseBadge(license)} \n \n ## Table of Contents \n \n * [Installation](#installation) \n \n * [Usage](#usage) \n \n * [Contributing](#contributing) \n \n * [License](#license) \n \n ## Installation \n ${data.install} \n \n ## Usage \n ${data.use} \n \n ## Contributing \n ${data.collab} \n \n ## Tests \n ${data.test} \n \n ## Questions? \n ${data.quest} \n \n ## License \n ${data.license} \n \n ${renderLicenseLink(license)} \n \n ${renderLicenseSection(license)}`;
 
 };
 
