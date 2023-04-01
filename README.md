@@ -3,7 +3,7 @@
 ## Description 
  Using starter code provided by the boot camp, this app will generate high-quality README files by using the command line within a CLI such as VS Code. The user will input information and the 'Inquirer package' will be used to dynamically create the README.
  
-A walkthrough of the CLI application where a README file is generated can be found here: [README Generator](https://drive.google.com/file/d/1opJn6V07_wkamW1GzAS53-ML9RcjetLy/view)
+A walkthrough of the CLI application where a README file is generated can be found here: [README Generator](https://drive.google.com/file/d/1p1SXyWo0lxX_9dwZitKXokRqTnM04ePs/view)
 
  ## Table of Contents 
  

@@ -1,9 +1,9 @@
-# Title of Project 
+# Homework Assignment 9  
  
  ## Description 
- Description placeholder 
+ This is a readme generator to speed up the dev process 
  
- ![GNU License](https://img.shields.io/badge/license-GNU%20v3.0-brightgreen") 
+ ![Apache License 2.0](https://img.shields.io/badge/license-Apache--2.0-brightgreen") 
  
  ## Table of Contents 
  
@@ -16,23 +16,23 @@
  * [License](#license) 
  
  ## Installation 
- Install the inquirer package 
+ npm install express 
  
  ## Usage 
- The intent of use is to create a README file. 
+ To create a high quality readme, the user can use this CLI application to confirm they have all the necessary components to desrcibe their application. 
  
  ## Contributing 
- none 
+ Katievlasic 
  
  ## Tests 
- Testing instructions placeholder 
+ NA 
  
  ## Questions? 
- Please contact TBD placeholder 
+ Katievlasic 
  
  ## License 
- GNU General Pulic License v3.0 
+ Apache License 2.0 
  
- [GNU License]("https://www.gnu.org/licenses/licenses.en.html") 
+ [Apache License]("https://www.apache.org/licenses/") 
  
- "The GNU GPL is the most widely used free software license and has a strong copyleft requirement. When distributing derived works, the source code of the work must be made available under the same license. There are multiple variants of the GNU GPL, each with different requirements."
+ "A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code."
